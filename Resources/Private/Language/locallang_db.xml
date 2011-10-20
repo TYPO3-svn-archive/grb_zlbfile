@@ -14,7 +14,8 @@
 			<label index="tx_grbzlbfile_domain_model_document.description">Description</label>
 			<label index="tx_grbzlbfile_domain_model_document.file">File</label>
 			<label index="tx_grbzlbfile_domain_model_document.frontend_access">Frontend Access</label>
-			<label index="tx_grbzlbfile_domain_model_document.favorited_by_frontend_user">Favorited By Frontend User</label>
+			<label index="tx_grbzlbfile_domain_model_document.favorited_by_frontend_user">Favorited By Frontend User
+			</label>
 			<label index="tx_grbzlbfile_domain_model_document.categorys">Categorys</label>
 			<label index="tx_grbzlbfile_domain_model_frontenduser">Frontend User</label>
 			<label index="tx_grbzlbfile_domain_model_frontenduser.username">Username</label>
@@ -31,13 +32,15 @@
 			<label index="tx_grbzlbfile_domain_model_document.description">Beschreibung</label>
 			<label index="tx_grbzlbfile_domain_model_document.file">Datei</label>
 			<label index="tx_grbzlbfile_domain_model_document.frontend_access">Frontend Zugriff</label>
-			<label index="tx_grbzlbfile_domain_model_document.favorited_by_frontend_user">In den Favoriten folgender FE-User</label>
+			<label index="tx_grbzlbfile_domain_model_document.favorited_by_frontend_user">In den Favoriten folgender
+				FE-User
+			</label>
 			<label index="tx_grbzlbfile_domain_model_document.categorys">Kategorien</label>
 			<label index="tx_grbzlbfile_domain_model_frontenduser">Frontend User</label>
 			<label index="tx_grbzlbfile_domain_model_frontenduser.username">Benutzername</label>
 			<label index="tx_grbzlbfile_domain_model_frontenduser.fe_user_groups">Benutzergruppen</label>
 			<label index="tx_grbzlbfile_domain_model_frontendusergroup">Benutzergruppen</label>
 			<label index="tx_grbzlbfile_domain_model_frontendusergroup.title">Title</label>
-		</languageKey>		
+		</languageKey>
 	</data>
 </T3locallang>

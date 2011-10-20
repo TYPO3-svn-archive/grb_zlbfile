@@ -1,27 +1,28 @@
 <?php
 /***************************************************************
-*  Copyright notice
-*
-*  (c) 2011 Juerg Langhard <langhard@greenbanana.ch>, GreenBanana GmbH - www.greenbanana.ch
-*  
-*  All rights reserved
-*
-*  This script is part of the TYPO3 project. The TYPO3 project is
-*  free software; you can redistribute it and/or modify
-*  it under the terms of the GNU General Public License as published by
-*  the Free Software Foundation; either version 3 of the License, or
-*  (at your option) any later version.
-*
-*  The GNU General Public License can be found at
-*  http://www.gnu.org/copyleft/gpl.html.
-*
-*  This script is distributed in the hope that it will be useful,
-*  but WITHOUT ANY WARRANTY; without even the implied warranty of
-*  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-*  GNU General Public License for more details.
-*
-*  This copyright notice MUST APPEAR in all copies of the script!
-***************************************************************/
+ *  Copyright notice
+ *
+ *  (c) 2011 Juerg Langhard <langhard@greenbanana.ch>, GreenBanana GmbH
+ *  www.greenbanana.ch
+ *
+ *  All rights reserved
+ *
+ *  This script is part of the TYPO3 project. The TYPO3 project is
+ *  free software; you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation; either version 3 of the License, or
+ *  (at your option) any later version.
+ *
+ *  The GNU General Public License can be found at
+ *  http://www.gnu.org/copyleft/gpl.html.
+ *
+ *  This script is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ *
+ *  This copyright notice MUST APPEAR in all copies of the script!
+ ***************************************************************/
 
 /**
  * Document
@@ -30,11 +31,11 @@ class Tx_GrbZlbfile_Domain_Model_Document extends Tx_Extbase_DomainObject_Abstra
 
 	/**
 	 * tstamp
-	 * 
+	 *
 	 * @var DateTime
 	 */
 	protected $tstamp;
-	
+
 	/**
 	 * headline
 	 *
@@ -77,13 +78,13 @@ class Tx_GrbZlbfile_Domain_Model_Document extends Tx_Extbase_DomainObject_Abstra
 	 * @var Tx_Extbase_Persistence_ObjectStorage<Tx_GrbZlbfile_Domain_Model_FrontendUser>
 	 */
 	protected $favoritedByFrontendUser;
-	
+
 	/**
 	 * favoritedByCurrentFrontendUser
-	 * 
+	 *
 	 * @var string
 	 */
-	protected $favoritedByCurrentFrontendUser;	
+	protected $favoritedByCurrentFrontendUser;
 
 	/**
 	 * categorys
@@ -93,8 +94,13 @@ class Tx_GrbZlbfile_Domain_Model_Document extends Tx_Extbase_DomainObject_Abstra
 	protected $categorys;
 
 
+	/**
+	 * document model constructor
+	 *
+	 * @return void
+	 */
 	public function __construct() {
-		//Do not remove the next line: It would break the functionality
+			// Do not remove the next line: It would break the functionality
 		$this->initStorageObjects();
 	}
 
@@ -105,25 +111,29 @@ class Tx_GrbZlbfile_Domain_Model_Document extends Tx_Extbase_DomainObject_Abstra
 	 */
 	protected function initStorageObjects() {
 		/**
-		* Do not modify this method!
-		* It will be rewritten on each save in the extension builder
-		* You may modify the constructor of this class instead
-		*/
+		 * Do not modify this method!
+		 * It will be rewritten on each save in the extension builder
+		 * You may modify the constructor of this class instead
+		 */
 		$this->frontendAccess = new Tx_Extbase_Persistence_ObjectStorage();
-		
+
 		$this->favoritedByFrontendUser = new Tx_Extbase_Persistence_ObjectStorage();
-		
+
 		$this->categorys = new Tx_Extbase_Persistence_ObjectStorage();
 	}
 
 	/**
+	 * get Tstamp
+	 *
 	 * @return DateTime
 	 */
 	public function getTstamp() {
 		return $this->tstamp;
 	}
-	
+
 	/**
+	 * set headLine
+	 *
 	 * @param string $headline
 	 * @return void
 	 */
@@ -132,6 +142,8 @@ class Tx_GrbZlbfile_Domain_Model_Document extends Tx_Extbase_DomainObject_Abstra
 	}
 
 	/**
+	 * get headLine
+	 *
 	 * @return string
 	 */
 	public function getHeadline() {
@@ -139,6 +151,8 @@ class Tx_GrbZlbfile_Domain_Model_Document extends Tx_Extbase_DomainObject_Abstra
 	}
 
 	/**
+	 * set owner
+	 *
 	 * @param string $owner
 	 * @return void
 	 */
@@ -147,6 +161,8 @@ class Tx_GrbZlbfile_Domain_Model_Document extends Tx_Extbase_DomainObject_Abstra
 	}
 
 	/**
+	 * get owner
+	 *
 	 * @return string
 	 */
 	public function getOwner() {
@@ -154,6 +170,8 @@ class Tx_GrbZlbfile_Domain_Model_Document extends Tx_Extbase_DomainObject_Abstra
 	}
 
 	/**
+	 * set description
+	 *
 	 * @param string $description
 	 * @return void
 	 */
@@ -162,6 +180,8 @@ class Tx_GrbZlbfile_Domain_Model_Document extends Tx_Extbase_DomainObject_Abstra
 	}
 
 	/**
+	 * get description
+	 *
 	 * @return string
 	 */
 	public function getDescription() {
@@ -169,6 +189,8 @@ class Tx_GrbZlbfile_Domain_Model_Document extends Tx_Extbase_DomainObject_Abstra
 	}
 
 	/**
+	 * set file
+	 *
 	 * @param string $file
 	 * @return void
 	 */
@@ -177,6 +199,8 @@ class Tx_GrbZlbfile_Domain_Model_Document extends Tx_Extbase_DomainObject_Abstra
 	}
 
 	/**
+	 * get file
+	 *
 	 * @return string
 	 */
 	public function getFile() {
@@ -184,6 +208,8 @@ class Tx_GrbZlbfile_Domain_Model_Document extends Tx_Extbase_DomainObject_Abstra
 	}
 
 	/**
+	 * set frontendAccess
+	 *
 	 * @param Tx_Extbase_Persistence_ObjectStorage<Tx_GrbZlbfile_Domain_Model_FrontendUserGroup> $frontendAccess
 	 * @return void
 	 */
@@ -192,6 +218,8 @@ class Tx_GrbZlbfile_Domain_Model_Document extends Tx_Extbase_DomainObject_Abstra
 	}
 
 	/**
+	 * get frontendAccess
+	 *
 	 * @return Tx_Extbase_Persistence_ObjectStorage<Tx_GrbZlbfile_Domain_Model_FrontendUserGroup>
 	 */
 	public function getFrontendAccess() {
@@ -199,7 +227,10 @@ class Tx_GrbZlbfile_Domain_Model_Document extends Tx_Extbase_DomainObject_Abstra
 	}
 
 	/**
-	 * @param Tx_GrbZlbfile_Domain_Model_FrontendUserGroup the FrontendUserGroup to be added
+	 * add frontendAcces
+	 * the FrontendUserGroup to be added
+	 *
+	 * @param Tx_GrbZlbfile_Domain_Model_FrontendUserGroup $frontendAcces
 	 * @return void
 	 */
 	public function addFrontendAcces(Tx_GrbZlbfile_Domain_Model_FrontendUserGroup $frontendAcces) {
@@ -207,7 +238,10 @@ class Tx_GrbZlbfile_Domain_Model_Document extends Tx_Extbase_DomainObject_Abstra
 	}
 
 	/**
-	 * @param Tx_GrbZlbfile_Domain_Model_FrontendUserGroup the FrontendUserGroup to be removed
+	 * remove frontendAcces
+	 * the FrontendUserGroup to be removed
+	 *
+	 * @param Tx_GrbZlbfile_Domain_Model_FrontendUserGroup $frontendAccesToRemove
 	 * @return void
 	 */
 	public function removeFrontendAcces(Tx_GrbZlbfile_Domain_Model_FrontendUserGroup $frontendAccesToRemove) {
@@ -215,6 +249,8 @@ class Tx_GrbZlbfile_Domain_Model_Document extends Tx_Extbase_DomainObject_Abstra
 	}
 
 	/**
+	 * set favoritedByFrontendUser
+	 *
 	 * @param Tx_Extbase_Persistence_ObjectStorage<Tx_GrbZlbfile_Domain_Model_FrontendUser> $favoritedByFrontendUser
 	 * @return void
 	 */
@@ -223,6 +259,8 @@ class Tx_GrbZlbfile_Domain_Model_Document extends Tx_Extbase_DomainObject_Abstra
 	}
 
 	/**
+	 * get favoritedByFrontendUser
+	 *
 	 * @return Tx_Extbase_Persistence_ObjectStorage<Tx_GrbZlbfile_Domain_Model_FrontendUser>
 	 */
 	public function getFavoritedByFrontendUser() {
@@ -230,19 +268,24 @@ class Tx_GrbZlbfile_Domain_Model_Document extends Tx_Extbase_DomainObject_Abstra
 	}
 
 	/**
+	 * get favoritedByCurrentFrontendUser
+	 *
 	 * @return string
 	 */
 	public function getFavoritedByCurrentFrontendUser() {
-		foreach ($this->favoritedByFrontendUser as $favorited){
-			if($favorited->uid == $GLOBALS['TSFE']->fe_user->user['uid']){
-				return true;
+		foreach ($this->favoritedByFrontendUser as $favorited) {
+			if ($favorited->uid == $GLOBALS['TSFE']->fe_user->user['uid']) {
+				return TRUE;
 			}
 		}
-		return false;
-	}	
+		return FALSE;
+	}
 
 	/**
-	 * @param Tx_GrbZlbfile_Domain_Model_FrontendUser the FrontendUser to be added
+	 * add favoritedByFrontendUser
+	 * the FrontendUser to be added
+	 *
+	 * @param Tx_GrbZlbfile_Domain_Model_FrontendUser $favoritedByFrontendUser
 	 * @return void
 	 */
 	public function addFavoritedByFrontendUser(Tx_GrbZlbfile_Domain_Model_FrontendUser $favoritedByFrontendUser) {
@@ -250,7 +293,10 @@ class Tx_GrbZlbfile_Domain_Model_Document extends Tx_Extbase_DomainObject_Abstra
 	}
 
 	/**
-	 * @param Tx_GrbZlbfile_Domain_Model_FrontendUser the FrontendUser to be removed
+	 * remove favoritedByFrontendUser
+	 * the FrontendUser to be removed
+	 *
+	 * @param Tx_GrbZlbfile_Domain_Model_FrontendUser $favoritedByFrontendUserToRemove
 	 * @return void
 	 */
 	public function removeFavoritedByFrontendUser(Tx_GrbZlbfile_Domain_Model_FrontendUser $favoritedByFrontendUserToRemove) {
@@ -258,6 +304,8 @@ class Tx_GrbZlbfile_Domain_Model_Document extends Tx_Extbase_DomainObject_Abstra
 	}
 
 	/**
+	 * set categorys
+	 *
 	 * @param Tx_Extbase_Persistence_ObjectStorage<Tx_GrbZlbfile_Domain_Model_Category> $categorys
 	 * @return void
 	 */
@@ -266,6 +314,8 @@ class Tx_GrbZlbfile_Domain_Model_Document extends Tx_Extbase_DomainObject_Abstra
 	}
 
 	/**
+	 * get categorys
+	 *
 	 * @return Tx_Extbase_Persistence_ObjectStorage<Tx_GrbZlbfile_Domain_Model_Category>
 	 */
 	public function getCategorys() {
@@ -273,7 +323,10 @@ class Tx_GrbZlbfile_Domain_Model_Document extends Tx_Extbase_DomainObject_Abstra
 	}
 
 	/**
-	 * @param Tx_GrbZlbfile_Domain_Model_Category the Category to be added
+	 * add category
+	 * the Category to be added
+	 *
+	 * @param Tx_GrbZlbfile_Domain_Model_Category $category
 	 * @return void
 	 */
 	public function addCategory(Tx_GrbZlbfile_Domain_Model_Category $category) {
@@ -281,7 +334,10 @@ class Tx_GrbZlbfile_Domain_Model_Document extends Tx_Extbase_DomainObject_Abstra
 	}
 
 	/**
-	 * @param Tx_GrbZlbfile_Domain_Model_Category the Category to be removed
+	 * remove category
+	 * the Category to be removed
+	 * 
+	 * @param Tx_GrbZlbfile_Domain_Model_Category $categoryToRemove
 	 * @return void
 	 */
 	public function removeCategory(Tx_GrbZlbfile_Domain_Model_Category $categoryToRemove) {
@@ -289,4 +345,5 @@ class Tx_GrbZlbfile_Domain_Model_Document extends Tx_Extbase_DomainObject_Abstra
 	}
 
 }
+
 ?>

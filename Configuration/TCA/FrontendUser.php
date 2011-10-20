@@ -1,5 +1,5 @@
 <?php
-if (!defined ('TYPO3_MODE')) {
+if (!defined('TYPO3_MODE')) {
 	die ('Access denied.');
 }
 
@@ -42,16 +42,16 @@ $TCA['tx_grbzlbfile_domain_model_frontenduser'] = array(
 			),
 		),
 		'l10n_diffsource' => array(
-			'config' =>array(
-				'type' =>'passthrough',
+			'config' => array(
+				'type' => 'passthrough',
 			),
 		),
 		't3ver_label' => array(
 			'label' => 'LLL:EXT:lang/locallang_general.xml:LGL.versionLabel',
 			'config' => array(
-			'type' => 'input',
-			'size' => 30,
-			'max' => 255,
+				'type' => 'input',
+				'size' => 30,
+				'max' => 255,
 			)
 		),
 		'hidden' => array(
@@ -123,16 +123,16 @@ $TCA['tx_grbzlbfile_domain_model_frontenduser'] = array(
 						'icon' => 'edit2.gif',
 						'popup_onlyOpenIfSelected' => 1,
 						'JSopenParams' => 'height=350,width=580,status=0,menubar=0,scrollbars=1',
-						),
+					),
 					'add' => Array(
 						'type' => 'script',
 						'title' => 'Create new',
 						'icon' => 'add.gif',
 						'params' => array(
-							'table'=>'tx_grbzlbfile_domain_model_frontendusergroup',
+							'table' => 'tx_grbzlbfile_domain_model_frontendusergroup',
 							'pid' => '###CURRENT_PID###',
 							'setValue' => 'prepend'
-							),
+						),
 						'script' => 'wizard_add.php',
 					),
 				),

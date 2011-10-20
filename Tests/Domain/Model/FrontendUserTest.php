@@ -1,28 +1,28 @@
 <?php
 
 /***************************************************************
-*  Copyright notice
-*
-*  (c) 2011 Juerg Langhard <langhard@greenbanana.ch>, GreenBanana GmbH - www.greenbanana.ch
-*  			
-*  All rights reserved
-*
-*  This script is part of the TYPO3 project. The TYPO3 project is
-*  free software; you can redistribute it and/or modify
-*  it under the terms of the GNU General Public License as published by
-*  the Free Software Foundation; either version 2 of the License, or
-*  (at your option) any later version.
-*
-*  The GNU General Public License can be found at
-*  http://www.gnu.org/copyleft/gpl.html.
-*
-*  This script is distributed in the hope that it will be useful,
-*  but WITHOUT ANY WARRANTY; without even the implied warranty of
-*  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-*  GNU General Public License for more details.
-*
-*  This copyright notice MUST APPEAR in all copies of the script!
-***************************************************************/
+ *  Copyright notice
+ *
+ *  (c) 2011 Juerg Langhard <langhard@greenbanana.ch>, GreenBanana GmbH - www.greenbanana.ch
+ *
+ *  All rights reserved
+ *
+ *  This script is part of the TYPO3 project. The TYPO3 project is
+ *  free software; you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation; either version 2 of the License, or
+ *  (at your option) any later version.
+ *
+ *  The GNU General Public License can be found at
+ *  http://www.gnu.org/copyleft/gpl.html.
+ *
+ *  This script is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ *
+ *  This copyright notice MUST APPEAR in all copies of the script!
+ ***************************************************************/
 
 /**
  * Testcase for class Tx_GrbZlbfile_Domain_Model_FrontendUser.
@@ -49,17 +49,18 @@ class Tx_GrbZlbfile_Domain_Model_FrontendUserTest extends Tx_Extbase_Tests_Unit_
 	public function tearDown() {
 		unset($this->fixture);
 	}
-	
-	
-	/**
-	 * @test
-	 */
-	public function getUsernameReturnsInitialValueForString() { }
+
 
 	/**
 	 * @test
 	 */
-	public function setUsernameForStringSetsUsername() { 
+	public function getUsernameReturnsInitialValueForString() {
+	}
+
+	/**
+	 * @test
+	 */
+	public function setUsernameForStringSetsUsername() {
 		$this->fixture->setUsername('Conceived at T3CON10');
 
 		$this->assertSame(
@@ -67,11 +68,11 @@ class Tx_GrbZlbfile_Domain_Model_FrontendUserTest extends Tx_Extbase_Tests_Unit_
 			$this->fixture->getUsername()
 		);
 	}
-	
+
 	/**
 	 * @test
 	 */
-	public function getFeUserGroupsReturnsInitialValueForObjectStorageContainingTx_GrbZlbfile_Domain_Model_FrontendUserGroup() { 
+	public function getFeUserGroupsReturnsInitialValueForObjectStorageContainingTx_GrbZlbfile_Domain_Model_FrontendUserGroup() {
 		$newObjectStorage = new Tx_Extbase_Persistence_ObjectStorage();
 		$this->assertEquals(
 			$newObjectStorage,
@@ -82,7 +83,7 @@ class Tx_GrbZlbfile_Domain_Model_FrontendUserTest extends Tx_Extbase_Tests_Unit_
 	/**
 	 * @test
 	 */
-	public function setFeUserGroupsForObjectStorageContainingTx_GrbZlbfile_Domain_Model_FrontendUserGroupSetsFeUserGroups() { 
+	public function setFeUserGroupsForObjectStorageContainingTx_GrbZlbfile_Domain_Model_FrontendUserGroupSetsFeUserGroups() {
 		$feUserGroup = new Tx_GrbZlbfile_Domain_Model_FrontendUserGroup();
 		$objectStorageHoldingExactlyOneFeUserGroups = new Tx_Extbase_Persistence_ObjectStorage();
 		$objectStorageHoldingExactlyOneFeUserGroups->attach($feUserGroup);
@@ -93,7 +94,7 @@ class Tx_GrbZlbfile_Domain_Model_FrontendUserTest extends Tx_Extbase_Tests_Unit_
 			$this->fixture->getFeUserGroups()
 		);
 	}
-	
+
 	/**
 	 * @test
 	 */
@@ -125,6 +126,7 @@ class Tx_GrbZlbfile_Domain_Model_FrontendUserTest extends Tx_Extbase_Tests_Unit_
 			$this->fixture->getFeUserGroups()
 		);
 	}
-	
+
 }
+
 ?>

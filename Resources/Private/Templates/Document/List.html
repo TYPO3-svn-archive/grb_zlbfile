@@ -1,15 +1,17 @@
-<f:layout name="Default" />
+<f:layout name="Default"/>
 
 <f:section name="main">
 
 	<div class="tx_grbzlbfile">
-		<f:flashMessages />			
+		<f:flashMessages/>
 
 		<f:if condition="{showNoFavorites}">
-			<ul>			
+			<ul>
 				<li class="tx_grbzlbfile-item">
 					<div class="tx_grbzlbfile-header">
-						<div class="tx_grbzlbfile-header-title"><f:translate key="templates.document.list.nofavorit.title"></f:translate></div>
+						<div class="tx_grbzlbfile-header-title">
+							<f:translate key="templates.document.list.nofavorit.title"></f:translate>
+						</div>
 					</div>
 					<div class="tx_grbzlbfile-content">
 						<f:translate key="templates.document.list.nofavorit.content"></f:translate>
@@ -19,10 +21,12 @@
 		</f:if>
 
 		<f:if condition="{showNoDocuments}">
-			<ul>			
+			<ul>
 				<li class="tx_grbzlbfile-item">
 					<div class="tx_grbzlbfile-header">
-						<div class="tx_grbzlbfile-header-title"><f:translate key="templates.document.list.nodocument.title"></f:translate></div>
+						<div class="tx_grbzlbfile-header-title">
+							<f:translate key="templates.document.list.nodocument.title"></f:translate>
+						</div>
 					</div>
 					<div class="tx_grbzlbfile-content">
 						<f:translate key="templates.document.list.nodocument.content"></f:translate>
@@ -30,26 +34,27 @@
 				</li>
 			</ul>
 		</f:if>
-		
-		<f:if condition="{showDocuments}">		
-		
+
+		<f:if condition="{showDocuments}">
+
 			<ul id="tx_grbzlbfile_collapse_{ce_uid}">
 				<f:for each="{documents}" as="document">
 					<div class="tx_grbzlbfile-header-navbar">
 						<f:if condition="{document.file}">
 							<span>
-								<a href="uploads/tx_grbzlbfile/{document.file}" target="_blank"> 
-									<f:image src="{f:uri.resource(path:'Icons/Download.png')}" alt="Download" />
+								<a href="uploads/tx_grbzlbfile/{document.file}" target="_blank">
+									<f:image src="{f:uri.resource(path:'Icons/Download.png')}" alt="Download"/>
 								</a>
 							</span>
 						</f:if>
-						
+
 						<f:if condition="{document.favoritedByCurrentFrontendUser}">
 							<f:then>
 								<!-- Default --> 
 								<span class="removeFromFavorite"> 
 									<f:link.action action="removeFromFavorite" arguments="{document:document}">
-										<f:image src="{f:uri.resource(path:'Icons/Favorit_Unset.png')}" alt="Von den Favoriten entfernen" />
+										<f:image src="{f:uri.resource(path:'Icons/Favorit_Unset.png')}"
+												 alt="Von den Favoriten entfernen"/>
 									</f:link.action> 
 								</span>
 							</f:then>
@@ -57,52 +62,65 @@
 								<!-- Default --> 
 								<span class="addToFavorite">
 									<f:link.action action="addToFavorite" arguments="{document:document}">
-										<f:image src="{f:uri.resource(path:'Icons/Favorit_Set.png')}" alt="Zu den Favoriten" /> 
+										<f:image src="{f:uri.resource(path:'Icons/Favorit_Set.png')}"
+												 alt="Zu den Favoriten"/>
 									</f:link.action> 
 								</span>
 							</f:else>
-						</f:if>					
-					</div>			
+						</f:if>
+					</div>
 					<li class="tx_grbzlbfile-item">
 						<div class="tx_grbzlbfile-header">
 							<div class="tx_grbzlbfile-header-title">{document.headline}
-								(Nr. {document.uid})</div>
+								(Nr. {document.uid})
+							</div>
 						</div>
 
 						<div class="tx_grbzlbfile-content">
 							<div class="tx_grbzlbfile-content-left">
-								<f:if condition="{document.file}">	
-		                			<f:translate key="templates.document.list.document.label.file"></f:translate><a href="uploads/tx_grbzlbfile/{document.file}" target="_blank">{document.file}</a>
-									<br /><br />
+								<f:if condition="{document.file}">
+									<f:translate key="templates.document.list.document.label.file"></f:translate>
+									<a href="uploads/tx_grbzlbfile/{document.file}" target="_blank">{document.file}</a>
+									<br/><br/>
 								</f:if>
 
 								<f:if condition="{document.description}">
-		                			<f:format.html parseFuncTSPath="lib.parseFunc_RTE">{document.description}</f:format.html><br />
+									<f:format.html parseFuncTSPath="lib.parseFunc_RTE">{document.description}
+									</f:format.html>
+									<br/>
 								</f:if>
 							</div>
 							<div class="tx_grbzlbfile-content-right">
-								<f:translate key="templates.document.list.document.label.owner"></f:translate><br/>
+								<f:translate key="templates.document.list.document.label.owner"></f:translate>
+								<br/>
 								<b>{document.owner}</b><br/><br/>
-								<f:translate key="templates.document.list.document.label.uploadDate"></f:translate><br/>
+								<f:translate key="templates.document.list.document.label.uploadDate"></f:translate>
+								<br/>
 								<b>
-									<f:format.date format="d.m.Y">{document.tstamp}</f:format.date> - 
-									<f:format.date format="H:i">{document.tstamp}</f:format.date> Uhr<br/>
+									<f:format.date format="d.m.Y">{document.tstamp}</f:format.date>
+									-
+									<f:format.date format="H:i">{document.tstamp}</f:format.date>
+									Uhr<br/>
 								</b><br/>
-								
-								<f:translate key="templates.document.list.document.label.access"></f:translate><br/>
+
+								<f:translate key="templates.document.list.document.label.access"></f:translate>
+								<br/>
 								<f:for each="{document.frontendAccess}" as="userGroup">
 									<b>{userGroup.title}</b><br/>
-								</f:for><br/>
-								<f:translate key="templates.document.list.document.label.categories"></f:translate><br/>
+								</f:for>
+								<br/>
+								<f:translate key="templates.document.list.document.label.categories"></f:translate>
+								<br/>
 								<f:for each="{document.categorys}" as="category">
 									<b>{category.title}</b><br/>
-								</f:for><br/>																	
+								</f:for>
+								<br/>
 							</div>
 						</div>
 					</li>
 				</f:for>
 			</ul>
 		</f:if>
-		
+
 	</div>
 </f:section>

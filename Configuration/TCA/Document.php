@@ -1,5 +1,5 @@
 <?php
-if (!defined ('TYPO3_MODE')) {
+if (!defined('TYPO3_MODE')) {
 	die ('Access denied.');
 }
 
@@ -42,16 +42,16 @@ $TCA['tx_grbzlbfile_domain_model_document'] = array(
 			),
 		),
 		'l10n_diffsource' => array(
-			'config' =>array(
-				'type' =>'passthrough',
+			'config' => array(
+				'type' => 'passthrough',
 			),
 		),
 		't3ver_label' => array(
 			'label' => 'LLL:EXT:lang/locallang_general.xml:LGL.versionLabel',
 			'config' => array(
-			'type' => 'input',
-			'size' => 30,
-			'max' => 255,
+				'type' => 'input',
+				'size' => 30,
+				'max' => 255,
 			)
 		),
 		'hidden' => array(
@@ -102,17 +102,17 @@ $TCA['tx_grbzlbfile_domain_model_document'] = array(
 				'eval' => 'trim,required'
 			),
 		),
-		
-		'tstamp' => Array (
-		        'exclude' => 0,
-		        'label' => 'Edit date',
-		        'config' => Array (
-		                'type' => 'none',
-		                'format' => 'date',
-		                'eval' => 'date',
-		         )
-		),		
-		
+
+		'tstamp' => Array(
+			'exclude' => 0,
+			'label' => 'Edit date',
+			'config' => Array(
+				'type' => 'none',
+				'format' => 'date',
+				'eval' => 'date',
+			)
+		),
+
 		'owner' => array(
 			'exclude' => 0,
 			'label' => 'LLL:EXT:grb_zlbfile/Resources/Private/Language/locallang_db.xml:tx_grbzlbfile_domain_model_document.owner',
@@ -122,27 +122,27 @@ $TCA['tx_grbzlbfile_domain_model_document'] = array(
 				'eval' => 'trim'
 			),
 		),
- 		'description' => array (        
-            'exclude' => 0,        
-            'label' => 'LLL:EXT:grb_zlbfile/Resources/Private/Language/locallang_db.xml:tx_grbzlbfile_domain_model_document.description',        
-            'config' => array (
-                'type' => 'text',
-                'cols' => '30',
-                'rows' => '5',
-                'wizards' => array(
-                    '_PADDING' => 2,
-                    'RTE' => array(
-                        'notNewRecords' => 1,
-                        'RTEonly'       => 1,
-                        'type'          => 'script',
-                        'title'         => 'Full screen Rich Text Editing|Formatteret redigering i hele vinduet',
-                        'icon'          => 'wizard_rte2.gif',
-                        'script'        => 'wizard_rte.php',
-                    ),
-                ),
-            ),
-            'defaultExtras' => 'richtext[*]'
-        ),		
+		'description' => array(
+			'exclude' => 0,
+			'label' => 'LLL:EXT:grb_zlbfile/Resources/Private/Language/locallang_db.xml:tx_grbzlbfile_domain_model_document.description',
+			'config' => array(
+				'type' => 'text',
+				'cols' => '30',
+				'rows' => '5',
+				'wizards' => array(
+					'_PADDING' => 2,
+					'RTE' => array(
+						'notNewRecords' => 1,
+						'RTEonly' => 1,
+						'type' => 'script',
+						'title' => 'Full screen Rich Text Editing|Formatteret redigering i hele vinduet',
+						'icon' => 'wizard_rte2.gif',
+						'script' => 'wizard_rte.php',
+					),
+				),
+			),
+			'defaultExtras' => 'richtext[*]'
+		),
 		'file' => array(
 			'exclude' => 0,
 			'label' => 'LLL:EXT:grb_zlbfile/Resources/Private/Language/locallang_db.xml:tx_grbzlbfile_domain_model_document.file',
@@ -176,16 +176,16 @@ $TCA['tx_grbzlbfile_domain_model_document'] = array(
 						'icon' => 'edit2.gif',
 						'popup_onlyOpenIfSelected' => 1,
 						'JSopenParams' => 'height=350,width=580,status=0,menubar=0,scrollbars=1',
-						),
+					),
 					'add' => Array(
 						'type' => 'script',
 						'title' => 'Create new',
 						'icon' => 'add.gif',
 						'params' => array(
-							'table'=>'tx_grbzlbfile_domain_model_frontendusergroup',
+							'table' => 'tx_grbzlbfile_domain_model_frontendusergroup',
 							'pid' => '###CURRENT_PID###',
 							'setValue' => 'prepend'
-							),
+						),
 						'script' => 'wizard_add.php',
 					),
 				),
@@ -212,16 +212,16 @@ $TCA['tx_grbzlbfile_domain_model_document'] = array(
 						'icon' => 'edit2.gif',
 						'popup_onlyOpenIfSelected' => 1,
 						'JSopenParams' => 'height=350,width=580,status=0,menubar=0,scrollbars=1',
-						),
+					),
 					'add' => Array(
 						'type' => 'script',
 						'title' => 'Create new',
 						'icon' => 'add.gif',
 						'params' => array(
-							'table'=>'tx_grbzlbfile_domain_model_frontenduser',
+							'table' => 'tx_grbzlbfile_domain_model_frontenduser',
 							'pid' => '###CURRENT_PID###',
 							'setValue' => 'prepend'
-							),
+						),
 						'script' => 'wizard_add.php',
 					),
 				),
@@ -248,16 +248,16 @@ $TCA['tx_grbzlbfile_domain_model_document'] = array(
 						'icon' => 'edit2.gif',
 						'popup_onlyOpenIfSelected' => 1,
 						'JSopenParams' => 'height=350,width=580,status=0,menubar=0,scrollbars=1',
-						),
+					),
 					'add' => Array(
 						'type' => 'script',
 						'title' => 'Create new',
 						'icon' => 'add.gif',
 						'params' => array(
-							'table'=>'tx_grbzlbfile_domain_model_category',
+							'table' => 'tx_grbzlbfile_domain_model_category',
 							'pid' => '###CURRENT_PID###',
 							'setValue' => 'prepend'
-							),
+						),
 						'script' => 'wizard_add.php',
 					),
 				),

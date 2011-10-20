@@ -1,28 +1,28 @@
 <?php
 
 /***************************************************************
-*  Copyright notice
-*
-*  (c) 2011 Juerg Langhard <langhard@greenbanana.ch>, GreenBanana GmbH - www.greenbanana.ch
-*  			
-*  All rights reserved
-*
-*  This script is part of the TYPO3 project. The TYPO3 project is
-*  free software; you can redistribute it and/or modify
-*  it under the terms of the GNU General Public License as published by
-*  the Free Software Foundation; either version 2 of the License, or
-*  (at your option) any later version.
-*
-*  The GNU General Public License can be found at
-*  http://www.gnu.org/copyleft/gpl.html.
-*
-*  This script is distributed in the hope that it will be useful,
-*  but WITHOUT ANY WARRANTY; without even the implied warranty of
-*  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-*  GNU General Public License for more details.
-*
-*  This copyright notice MUST APPEAR in all copies of the script!
-***************************************************************/
+ *  Copyright notice
+ *
+ *  (c) 2011 Juerg Langhard <langhard@greenbanana.ch>, GreenBanana GmbH - www.greenbanana.ch
+ *
+ *  All rights reserved
+ *
+ *  This script is part of the TYPO3 project. The TYPO3 project is
+ *  free software; you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation; either version 2 of the License, or
+ *  (at your option) any later version.
+ *
+ *  The GNU General Public License can be found at
+ *  http://www.gnu.org/copyleft/gpl.html.
+ *
+ *  This script is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ *
+ *  This copyright notice MUST APPEAR in all copies of the script!
+ ***************************************************************/
 
 /**
  * Testcase for class Tx_GrbZlbfile_Domain_Model_Document.
@@ -42,24 +42,41 @@ class Tx_GrbZlbfile_Domain_Model_DocumentTest extends Tx_Extbase_Tests_Unit_Base
 	 */
 	protected $fixture;
 
+	/**
+	 * setUp
+	 *
+	 * @return void
+	 */
 	public function setUp() {
 		$this->fixture = new Tx_GrbZlbfile_Domain_Model_Document();
 	}
 
+	/**
+	 * tearDown
+	 *
+	 * @return void
+	 */
 	public function tearDown() {
 		unset($this->fixture);
 	}
-	
-	
-	/**
-	 * @test
-	 */
-	public function getHeadlineReturnsInitialValueForString() { }
+
 
 	/**
+	 * getHeadlineReturnsInitialValueForString
+	 *
 	 * @test
+	 * @return void
 	 */
-	public function setHeadlineForStringSetsHeadline() { 
+	public function getHeadlineReturnsInitialValueForString() {
+	}
+
+	/**
+	 * setHeadlineForStringSetsHeadline
+	 *
+	 * @test
+	 * @return void
+	 */
+	public function setHeadlineForStringSetsHeadline() {
 		$this->fixture->setHeadline('Conceived at T3CON10');
 
 		$this->assertSame(
@@ -67,16 +84,23 @@ class Tx_GrbZlbfile_Domain_Model_DocumentTest extends Tx_Extbase_Tests_Unit_Base
 			$this->fixture->getHeadline()
 		);
 	}
-	
-	/**
-	 * @test
-	 */
-	public function getOwnerReturnsInitialValueForString() { }
 
 	/**
+	 * getOwnerReturnsInitialValueForString
+	 *
 	 * @test
+	 * @return void
 	 */
-	public function setOwnerForStringSetsOwner() { 
+	public function getOwnerReturnsInitialValueForString() {
+	}
+
+	/**
+	 * setOwnerForStringSetsOwner
+	 *
+	 * @test
+	 * @return void
+	 */
+	public function setOwnerForStringSetsOwner() {
 		$this->fixture->setOwner('Conceived at T3CON10');
 
 		$this->assertSame(
@@ -84,16 +108,23 @@ class Tx_GrbZlbfile_Domain_Model_DocumentTest extends Tx_Extbase_Tests_Unit_Base
 			$this->fixture->getOwner()
 		);
 	}
-	
-	/**
-	 * @test
-	 */
-	public function getDescriptionReturnsInitialValueForString() { }
 
 	/**
+	 * getDescriptionReturnsInitialValueForString
+	 *
 	 * @test
+	 * @return void
 	 */
-	public function setDescriptionForStringSetsDescription() { 
+	public function getDescriptionReturnsInitialValueForString() {
+	}
+
+	/**
+	 * setDescriptionForStringSetsDescription
+	 *
+	 * @test
+	 * @return void
+	 */
+	public function setDescriptionForStringSetsDescription() {
 		$this->fixture->setDescription('Conceived at T3CON10');
 
 		$this->assertSame(
@@ -101,16 +132,23 @@ class Tx_GrbZlbfile_Domain_Model_DocumentTest extends Tx_Extbase_Tests_Unit_Base
 			$this->fixture->getDescription()
 		);
 	}
-	
-	/**
-	 * @test
-	 */
-	public function getFileReturnsInitialValueForString() { }
 
 	/**
+	 * getFileReturnsInitialValueForString
+	 *
 	 * @test
+	 * @return void
 	 */
-	public function setFileForStringSetsFile() { 
+	public function getFileReturnsInitialValueForString() {
+	}
+
+	/**
+	 * setFileForStringSetsFile
+	 *
+	 * @test
+	 * @return void
+	 */
+	public function setFileForStringSetsFile() {
 		$this->fixture->setFile('Conceived at T3CON10');
 
 		$this->assertSame(
@@ -118,11 +156,14 @@ class Tx_GrbZlbfile_Domain_Model_DocumentTest extends Tx_Extbase_Tests_Unit_Base
 			$this->fixture->getFile()
 		);
 	}
-	
+
 	/**
+	 * getFrontendAccessReturnsInitialValueForObjectStorageContainingTx_GrbZlbfile_Domain_Model_FrontendUserGroup
+	 *
 	 * @test
+	 * @return void
 	 */
-	public function getFrontendAccessReturnsInitialValueForObjectStorageContainingTx_GrbZlbfile_Domain_Model_FrontendUserGroup() { 
+	public function getFrontendAccessReturnsInitialValueForObjectStorageContainingTx_GrbZlbfile_Domain_Model_FrontendUserGroup() {
 		$newObjectStorage = new Tx_Extbase_Persistence_ObjectStorage();
 		$this->assertEquals(
 			$newObjectStorage,
@@ -131,9 +172,12 @@ class Tx_GrbZlbfile_Domain_Model_DocumentTest extends Tx_Extbase_Tests_Unit_Base
 	}
 
 	/**
+	 * setFrontendAccessForObjectStorageContainingTx_GrbZlbfile_Domain_Model_FrontendUserGroupSetsFrontendAccess
+	 *
 	 * @test
+	 * return void
 	 */
-	public function setFrontendAccessForObjectStorageContainingTx_GrbZlbfile_Domain_Model_FrontendUserGroupSetsFrontendAccess() { 
+	public function setFrontendAccessForObjectStorageContainingTx_GrbZlbfile_Domain_Model_FrontendUserGroupSetsFrontendAccess() {
 		$frontendAcces = new Tx_GrbZlbfile_Domain_Model_FrontendUserGroup();
 		$objectStorageHoldingExactlyOneFrontendAccess = new Tx_Extbase_Persistence_ObjectStorage();
 		$objectStorageHoldingExactlyOneFrontendAccess->attach($frontendAcces);
@@ -144,9 +188,12 @@ class Tx_GrbZlbfile_Domain_Model_DocumentTest extends Tx_Extbase_Tests_Unit_Base
 			$this->fixture->getFrontendAccess()
 		);
 	}
-	
+
 	/**
+	 * addFrontendAccesToObjectStorageHoldingFrontendAccess
+	 *
 	 * @test
+	 * @return void
 	 */
 	public function addFrontendAccesToObjectStorageHoldingFrontendAccess() {
 		$frontendAcces = new Tx_GrbZlbfile_Domain_Model_FrontendUserGroup();
@@ -161,7 +208,10 @@ class Tx_GrbZlbfile_Domain_Model_DocumentTest extends Tx_Extbase_Tests_Unit_Base
 	}
 
 	/**
+	 * removeFrontendAccesFromObjectStorageHoldingFrontendAccess
+	 *
 	 * @test
+	 * @return void
 	 */
 	public function removeFrontendAccesFromObjectStorageHoldingFrontendAccess() {
 		$frontendAcces = new Tx_GrbZlbfile_Domain_Model_FrontendUserGroup();
@@ -176,11 +226,14 @@ class Tx_GrbZlbfile_Domain_Model_DocumentTest extends Tx_Extbase_Tests_Unit_Base
 			$this->fixture->getFrontendAccess()
 		);
 	}
-	
+
 	/**
+	 * getFavoritedByFrontendUserReturnsInitialValueForObjectStorageContainingTx_GrbZlbfile_Domain_Model_FrontendUser
+	 *
 	 * @test
+	 * @return void
 	 */
-	public function getFavoritedByFrontendUserReturnsInitialValueForObjectStorageContainingTx_GrbZlbfile_Domain_Model_FrontendUser() { 
+	public function getFavoritedByFrontendUserReturnsInitialValueForObjectStorageContainingTx_GrbZlbfile_Domain_Model_FrontendUser() {
 		$newObjectStorage = new Tx_Extbase_Persistence_ObjectStorage();
 		$this->assertEquals(
 			$newObjectStorage,
@@ -189,9 +242,12 @@ class Tx_GrbZlbfile_Domain_Model_DocumentTest extends Tx_Extbase_Tests_Unit_Base
 	}
 
 	/**
+	 * setFavoritedByFrontendUserForObjectStorageContainingTx_GrbZlbfile_Domain_Model_FrontendUserSetsFavoritedByFrontendUser
+	 *
 	 * @test
+	 * @return void
 	 */
-	public function setFavoritedByFrontendUserForObjectStorageContainingTx_GrbZlbfile_Domain_Model_FrontendUserSetsFavoritedByFrontendUser() { 
+	public function setFavoritedByFrontendUserForObjectStorageContainingTx_GrbZlbfile_Domain_Model_FrontendUserSetsFavoritedByFrontendUser() {
 		$favoritedByFrontendUser = new Tx_GrbZlbfile_Domain_Model_FrontendUser();
 		$objectStorageHoldingExactlyOneFavoritedByFrontendUser = new Tx_Extbase_Persistence_ObjectStorage();
 		$objectStorageHoldingExactlyOneFavoritedByFrontendUser->attach($favoritedByFrontendUser);
@@ -202,9 +258,12 @@ class Tx_GrbZlbfile_Domain_Model_DocumentTest extends Tx_Extbase_Tests_Unit_Base
 			$this->fixture->getFavoritedByFrontendUser()
 		);
 	}
-	
+
 	/**
+	 * addFavoritedByFrontendUserToObjectStorageHoldingFavoritedByFrontendUser
+	 *
 	 * @test
+	 * @return void
 	 */
 	public function addFavoritedByFrontendUserToObjectStorageHoldingFavoritedByFrontendUser() {
 		$favoritedByFrontendUser = new Tx_GrbZlbfile_Domain_Model_FrontendUser();
@@ -219,7 +278,10 @@ class Tx_GrbZlbfile_Domain_Model_DocumentTest extends Tx_Extbase_Tests_Unit_Base
 	}
 
 	/**
+	 * removeFavoritedByFrontendUserFromObjectStorageHoldingFavoritedByFrontendUser
+	 *
 	 * @test
+	 * @return void
 	 */
 	public function removeFavoritedByFrontendUserFromObjectStorageHoldingFavoritedByFrontendUser() {
 		$favoritedByFrontendUser = new Tx_GrbZlbfile_Domain_Model_FrontendUser();
@@ -234,11 +296,14 @@ class Tx_GrbZlbfile_Domain_Model_DocumentTest extends Tx_Extbase_Tests_Unit_Base
 			$this->fixture->getFavoritedByFrontendUser()
 		);
 	}
-	
+
 	/**
+	 * getCategorysReturnsInitialValueForObjectStorageContainingTx_GrbZlbfile_Domain_Model_Category
+	 *
 	 * @test
+	 * @return void
 	 */
-	public function getCategorysReturnsInitialValueForObjectStorageContainingTx_GrbZlbfile_Domain_Model_Category() { 
+	public function getCategorysReturnsInitialValueForObjectStorageContainingTx_GrbZlbfile_Domain_Model_Category() {
 		$newObjectStorage = new Tx_Extbase_Persistence_ObjectStorage();
 		$this->assertEquals(
 			$newObjectStorage,
@@ -247,9 +312,12 @@ class Tx_GrbZlbfile_Domain_Model_DocumentTest extends Tx_Extbase_Tests_Unit_Base
 	}
 
 	/**
+	 * setCategorysForObjectStorageContainingTx_GrbZlbfile_Domain_Model_CategorySetsCategorys
+	 *
 	 * @test
+	 * @return void
 	 */
-	public function setCategorysForObjectStorageContainingTx_GrbZlbfile_Domain_Model_CategorySetsCategorys() { 
+	public function setCategorysForObjectStorageContainingTx_GrbZlbfile_Domain_Model_CategorySetsCategorys() {
 		$category = new Tx_GrbZlbfile_Domain_Model_Category();
 		$objectStorageHoldingExactlyOneCategorys = new Tx_Extbase_Persistence_ObjectStorage();
 		$objectStorageHoldingExactlyOneCategorys->attach($category);
@@ -260,9 +328,12 @@ class Tx_GrbZlbfile_Domain_Model_DocumentTest extends Tx_Extbase_Tests_Unit_Base
 			$this->fixture->getCategorys()
 		);
 	}
-	
+
 	/**
+	 * addCategoryToObjectStorageHoldingCategorys
+	 *
 	 * @test
+	 * @return void
 	 */
 	public function addCategoryToObjectStorageHoldingCategorys() {
 		$category = new Tx_GrbZlbfile_Domain_Model_Category();
@@ -277,7 +348,10 @@ class Tx_GrbZlbfile_Domain_Model_DocumentTest extends Tx_Extbase_Tests_Unit_Base
 	}
 
 	/**
+	 * removeCategoryFromObjectStorageHoldingCategorys
+	 *
 	 * @test
+	 * @return void
 	 */
 	public function removeCategoryFromObjectStorageHoldingCategorys() {
 		$category = new Tx_GrbZlbfile_Domain_Model_Category();
@@ -292,6 +366,7 @@ class Tx_GrbZlbfile_Domain_Model_DocumentTest extends Tx_Extbase_Tests_Unit_Base
 			$this->fixture->getCategorys()
 		);
 	}
-	
+
 }
+
 ?>

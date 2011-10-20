@@ -1,5 +1,5 @@
 <?php
-if (!defined ('TYPO3_MODE')) {
+if (!defined('TYPO3_MODE')) {
 	die ('Access denied.');
 }
 
@@ -7,13 +7,13 @@ Tx_Extbase_Utility_Extension::configurePlugin(
 	$_EXTKEY,
 	'Filemanager',
 	array(
-		'Document' => 'list, addToFavorite, removeFromFavorite',
-		
+		 'Document' => 'list, addToFavorite, removeFromFavorite',
+
 	),
 	// non-cacheable actions
 	array(
-		'Document' => 'list, addToFavorite, removeFromFavorite',
-		
+		 'Document' => 'list, addToFavorite, removeFromFavorite',
+
 	)
 );
 
