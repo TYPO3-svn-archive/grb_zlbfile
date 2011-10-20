@@ -1,0 +1,35 @@
+<T3DataStructure>
+    <sheets>
+        <sheet1>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>Darstellung</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <settings.flexform.show.category>
+                        <TCEforms>
+                            <label>Category</label>
+                            <config>
+                                <type>select</type>
+                                <foreign_table>tx_grbzlbfile_domain_model_category</foreign_table> 
+      							<foreign_table_where>ORDER BY tx_grbzlbfile_domain_model_category.title</foreign_table_where>								
+                                <minitems>1</minitems>
+                                <maxitems>1</maxitems>
+                                <multiple>0</multiple>
+                            </config>
+                        </TCEforms>
+                    </settings.flexform.show.category>
+					<settings.flexform.show.favorit>
+					  <TCEforms>
+					    <label>Favoriten</label>
+					    <config>
+					      <type>check</type>
+					     </config>
+					   </TCEforms>
+ 					</settings.flexform.show.favorit>
+                </el>
+            </ROOT>
+        </sheet1>
+    </sheets>
+</T3DataStructure>

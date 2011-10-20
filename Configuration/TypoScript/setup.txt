@@ -1,0 +1,57 @@
+plugin.tx_grbzlbfile {
+	view {
+		templateRootPath = {$plugin.tx_grbzlbfile.view.templateRootPath}
+		partialRootPath = {$plugin.tx_grbzlbfile.view.partialRootPath}
+		layoutRootPath = {$plugin.tx_grbzlbfile.view.layoutRootPath}
+	}
+	persistence {
+		storagePid = {$plugin.tx_grbzlbfile.persistence.storagePid}
+	}
+}
+
+# -----------------------------------------------------------------------------------------
+# Extbase configuration
+# -----------------------------------------------------------------------------------------
+
+config.tx_extbase {
+    persistence{
+        enableAutomaticCacheClearing = 1
+        updateReferenceIndex = 0
+        classes {
+			Tx_GrbZlbfile_Domain_Model_FrontendUser {
+        		mapping {
+            		tableName = fe_users
+					columns {
+						# db-field fe_users    = db-field domain-model
+						# --------------------------------------------
+                        usergroup.foreignClass = Tx_GrbZlbfile_Domain_Model_FrontendUserGroup
+                    }
+        		}
+    		}
+            Tx_GrbZlbfile_Domain_Model_FrontendUserGroup {
+                mapping {
+                    tableName = fe_groups
+                    columns {
+						# db-field fe_groups    = db-field domain-model
+						# --------------------------------------------                    
+                        subgroup.foreignClass = Tx_GrbZlbfile_Domain_Model_FrontendUserGroup
+                        lockToDomain.mapOnProperty = lockToDomain
+                    }
+                }
+            }
+        }
+    }
+}
+
+# -----------------------------------------------------------------------------------------
+# Page configuration
+# -----------------------------------------------------------------------------------------
+page{
+	includeCSS { 
+  		grb_zlbfile01 = EXT:grb_zlbfile/Resources/Public/Style/tx_grbzlbfile.css
+	}
+	includeJS{
+		grb_zlbfile01 = fileadmin/templates/lib/jquery/jquery-1.3.2.min.js
+		grb_zlbfile02 = EXT:grb_zlbfile/Resources/Public/JavaScript/tx_grbzlbfile.js
+	}
+}

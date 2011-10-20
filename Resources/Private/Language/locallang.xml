@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>module</type>
+		<description>Language labels for the Frontend Filemanager extension in the FRONTEND</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="templates.document.list.nofavorit.title">No Favorites</label>
+			<label index="templates.document.list.nofavorit.content">You have not selected a personal favorite. By clicking on the star icon, you have the option to create a list of documents.</label>
+			<label index="templates.document.list.nodocument.title">No documents in this category</label>
+			<label index="templates.document.list.nodocument.content">This category currently contains no documents.</label>
+			<label index="templates.document.list.document.label.file">File: </label>
+			<label index="templates.document.list.document.label.owner">Owner: </label>
+			<label index="templates.document.list.document.label.uploadDate">Upload: </label>
+			<label index="templates.document.list.document.label.access">Access: </label>
+			<label index="templates.document.list.document.label.categories">Categories: </label>
+		</languageKey>
+		<languageKey index="de" type="array">
+			<label index="templates.document.list.nofavorit.title">Keine Favoriten</label>
+			<label index="templates.document.list.nofavorit.content">Sie haben noch keine persönlichen Favoriten gewählt. Durch klicken auf das Sternsymbol, haben Sie die Möglichkeit eine indiviuelle Liste von Dokumenten zu erstellen.</label>
+			<label index="templates.document.list.nodocument.title">Keine Dokumente in dieser Kategorie</label>
+			<label index="templates.document.list.nodocument.content">Diese Kategorie enthält zur Zeit keine Dokumente.</label>
+			<label index="templates.document.list.document.label.file">Datei: </label>
+			<label index="templates.document.list.document.label.owner">Eigentümer: </label>
+			<label index="templates.document.list.document.label.uploadDate">Upload: </label>
+			<label index="templates.document.list.document.label.access">Stufen: </label>
+			<label index="templates.document.list.document.label.categories">Kategorien: </label>
+		</languageKey>		
+	</data>
+</T3locallang>
