@@ -1,5 +1,5 @@
 2011-10-20 Ralf Merz <rfm@lightwerk.com>
-	* raised version to
+	* raised version to 1.0.3
 	* cleaned up code with PHPStorm TYPO3 xml-code-scheme
 	* cleaned up code using PHP CodeSniffer
 	* added doc-folder with a manual.swx to start writing manual, manual not yet in SVN
