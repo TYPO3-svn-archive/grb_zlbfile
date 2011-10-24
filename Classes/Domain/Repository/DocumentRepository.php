@@ -24,6 +24,12 @@
  *  This copyright notice MUST APPEAR in all copies of the script!
  ***************************************************************/
 
+/**
+ * DocumentRepository.php
+ *
+ * $Id$
+ */
+
 
 /**
  * Repository for Tx_GrbZlbfile_Domain_Model_Document
@@ -78,10 +84,16 @@ class Tx_GrbZlbfile_Domain_Repository_DocumentRepository extends Tx_Extbase_Pers
 	private function limitByFrontendAccess($documents, $feUserGroupArray) {
 		$result = array();
 		foreach ($documents as $document) {
-			foreach ($document->getFrontendAccess() as $access) {
-				if (in_array($access->getUid(), $feUserGroupArray)) {
-					$result[] = $document;
-					break;
+				// 2011-10-21:Ralf Merz
+				// if no group is selected show the document globally
+			if (sizeof($document->getFrontendAccess()) == 0) {
+				$result[] = $document;
+			} else {
+				foreach ($document->getFrontendAccess() as $access) {
+					if (in_array($access->getUid(), $feUserGroupArray)) {
+						$result[] = $document;
+						break;
+					}
 				}
 			}
 		}

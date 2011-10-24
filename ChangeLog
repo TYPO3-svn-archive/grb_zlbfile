@@ -1,3 +1,7 @@
+2011-10-21 Ralf Merz <rfm@lightwerk.com>
+	* if no fe_user_group is selected in document, show it (extended DocumentRepository)
+	* raised version to 1.0.4
+
 2011-10-20 Ralf Merz <rfm@lightwerk.com>
 	* raised version to 1.0.3
 	* cleaned up code with PHPStorm TYPO3 xml-code-scheme
